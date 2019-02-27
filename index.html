@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SWAPI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="swapiObj.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="box">
+                <h1 id="inputLabel">SWAPI</h1>
+            </div>
+        </div>
+        <div id="body">
+            <div class="box">
+                <input name="search" type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search by Name.." title="Type in a name">
+            </div>
+            <div class="box">
+                <table id="customers">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>diameter</th>
+                            <th>climate</th>
+                            <th>gravity</th>
+                            <th>terrain</th>
+                        </tr>
+                    </thead>
+                    <tbody id="searchData">
+                        <script language="javascript" type="text/javascript">
+                            for (var a=0; a < swapiObj.results.length; a++) {
+                                document.write("<tr>");
+                                document.write("<td>" + swapiObj.results[a].name + "</td>");
+                                document.write("<td>" + swapiObj.results[a].diameter + "</td>");
+                                document.write("<td>" + swapiObj.results[a].climate + "</td>");
+                                document.write("<td>" + swapiObj.results[a].gravity + "</td>");
+                                document.write("<td>" + swapiObj.results[a].terrain + "</td>");
+                                document.write("</tr>");
+                            }
+                        </script>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="box">
+                <p>Copyright ©2019 All rights reserved | Created by Zufar Taqiuddin</p>
+            </div>
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
